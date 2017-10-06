@@ -173,6 +173,9 @@ class StatusUpdate : BasePacket, Serializable {
     } else {
       obj["game"] = VibeJSON.emptyObject;
     }
+    
+    obj["status"] = "online";
+    obj["afk"] = VibeJSON(false);
 
     return super.serialize(OPCode.STATUS_UPDATE, obj);
   }

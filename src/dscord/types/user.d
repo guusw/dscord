@@ -38,10 +38,10 @@ class Game {
     VibeJSON obj = VibeJSON.emptyObject;
 
     obj["name"] = VibeJSON(this.name);
+    obj["type"] = VibeJSON(cast(ushort)this.type);
 
     if (this.url != "") {
       obj["url"] = VibeJSON(this.url);
-      obj["type"] = VibeJSON(cast(ushort)this.type);
     }
 
     return obj;
